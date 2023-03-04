@@ -1,6 +1,6 @@
 import './App.css';
 import Land from './pages/Land'
-import Hire from './pages/Hire'
+// import Hire from './pages/Hire'
 
 function App() {
   return (

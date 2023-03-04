@@ -25,10 +25,10 @@ const handleSubmit = (event) => {
             <Link to='/hires'>
                 <button>Add New Job</button>
             </Link>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <input 
                     type="text"
-                    // value={}////////////
+                    value={jobState.jobTitle}
                     onChange={handleChange}
                 />
                 <input 
