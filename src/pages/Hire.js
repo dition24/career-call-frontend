@@ -1,8 +1,10 @@
 // Employer hiring page
 
+import Nav from '../components/Nav'
+
 function Hire(props) {
     return (
-        <h1></h1>
+        <Nav />
     )
 }
 
