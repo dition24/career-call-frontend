@@ -2,7 +2,7 @@
 
 function Index(props) {
     return (
-        <h1>1</h1>
+        <h1>{props.title} | {props.company} | {props.location}</h1>
     )
 }
 
