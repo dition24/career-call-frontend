@@ -35,7 +35,7 @@ function Post(props) {
     const loaded = () => {
         return props.post.map((ad) => (
             <div key={ad._id} className="ad">
-                <Link to ={`/people/${ad._id}`}>
+                <Link to ={`/hires/${ad._id}`}>
                     <h1>{ad.company}</h1>
                 </Link>
             </div>
