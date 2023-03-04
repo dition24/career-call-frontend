@@ -15,9 +15,9 @@ function Post(props) {
     const handleChange = (event) => {
         setNewForm((prevState) => ({
             ...prevState,
-            [event.target.name]         
-        }))
-    }
+            [event.target.name]: event.target.value,
+        }));
+    };
     
     // handle submit function for form
     const handleSubmit = (event) => {
