@@ -1,6 +1,6 @@
 // Employer hiring page
 import { useState, useEffect } from 'react'
-import Career from '../components/Career'
+import Index from '../components/Index'
 import Post from '../components/Post'
 import Nav from '../components/Nav'
 
@@ -53,7 +53,7 @@ function Hire(props) {
     return (
         <div>
             <Nav />
-            <Career career={career} createCareer={createCareer}/>
+            <Index career={career} createCareer={createCareer}/>
             <Post />
         </div>
 

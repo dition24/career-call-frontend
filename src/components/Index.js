@@ -2,7 +2,7 @@
 import {Link} from 'react-router-dom'
 import { useState } from "react";
 
-function Career(props) {
+function Index(props) {
 
    
     // loaded function
