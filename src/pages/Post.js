@@ -21,7 +21,6 @@ function Post(props) {
     
     // handle submit function for form
     const handleSubmit = (event) => {
-        console.log(event)
         event.preventDefault();
         props.createPost(newPost);
         setNewPost({
