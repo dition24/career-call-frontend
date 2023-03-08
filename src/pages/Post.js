@@ -1,6 +1,6 @@
 //employer post page
 import { useState } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 function Post(props) {
     // state to hold formData
@@ -21,6 +21,7 @@ function Post(props) {
     
     // handle submit function for form
     const handleSubmit = (event) => {
+        console.log(event)
         event.preventDefault();
         props.createPost(newPost);
         setNewPost({
@@ -31,20 +32,6 @@ function Post(props) {
         });
     };
 
-    // loaded function
-    const loaded = () => {
-        return props.post.map((ad) => (
-            <div key={ad._id} className="ad">
-                <Link to ={`/hires/${ad._id}`}>
-                    <h1>{ad.company}</h1>
-                </Link>
-            </div>
-        ));
-    };
-
-    const loading = () => {
-        return <h1>Loading...</h1>;
-    };
     
     return (
         <section className="ad-section">
@@ -79,7 +66,7 @@ function Post(props) {
                 />
                 <input type="submit" value="Create Post" />
             </form>
-            {props.post ? loaded() : loading()}
+            
         </section>
     );
 };
