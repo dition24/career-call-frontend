@@ -13,7 +13,7 @@ function Post(props) {
 
     // handleChange function for form
     const handleChange = (event) => {
-        setNewForm((prevState) => ({
+        setNewPost((prevState) => ({
             ...prevState,
             [event.target.name]: event.target.value,
         }));
@@ -23,7 +23,7 @@ function Post(props) {
     const handleSubmit = (event) => {
         event.preventDefault();
         props.createPost(newPost);
-        setNewForm({
+        setNewPost({
             company: "",
             position: "",
             location: "",
@@ -58,21 +58,21 @@ function Post(props) {
                 />
                 <input
                 type="text"
-                value={newForm.position}
+                value={newPost.position}
                 name="position"
                 placeholder="position"
                 onChange={handleChange}
                 />
                 <input
                 type="text"
-                value={newForm.location}
+                value={newPost.location}
                 name="location"
                 placeholder="location"
                 onChange={handleChange}
                 />
                 <input
                 type="text"
-                value={newForm.description}
+                value={newPost.description}
                 name="description"
                 placeholder="description"
                 onChange={handleChange}
