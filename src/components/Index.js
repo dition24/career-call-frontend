@@ -20,7 +20,7 @@ function Index(props) {
     };
 
     return (
-        <h1>{props.career ? loaded() : loading()}</h1>
+        <div>{props.career ? loaded() : loading()}</div>
     )
 }
 
