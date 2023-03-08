@@ -1,6 +1,6 @@
 //employer post page
 import { useState } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 function Post(props) {
     // state to hold formData
@@ -13,7 +13,7 @@ function Post(props) {
 
     // handleChange function for form
     const handleChange = (event) => {
-        setNewForm((prevState) => ({
+        setNewPost((prevState) => ({
             ...prevState,
             [event.target.name]: event.target.value,
         }));
@@ -21,9 +21,10 @@ function Post(props) {
     
     // handle submit function for form
     const handleSubmit = (event) => {
+        console.log(event)
         event.preventDefault();
         props.createPost(newPost);
-        setNewForm({
+        setNewPost({
             company: "",
             position: "",
             location: "",
@@ -31,20 +32,6 @@ function Post(props) {
         });
     };
 
-    // loaded function
-    const loaded = () => {
-        return props.post.map((ad) => (
-            <div key={ad._id} className="ad">
-                <Link to ={`/hires/${ad._id}`}>
-                    <h1>{ad.company}</h1>
-                </Link>
-            </div>
-        ));
-    };
-
-    const loading = () => {
-        return <h1>Loading...</h1>;
-    };
     
     return (
         <section className="ad-section">
@@ -58,28 +45,28 @@ function Post(props) {
                 />
                 <input
                 type="text"
-                value={newForm.position}
+                value={newPost.position}
                 name="position"
                 placeholder="position"
                 onChange={handleChange}
                 />
                 <input
                 type="text"
-                value={newForm.location}
+                value={newPost.location}
                 name="location"
                 placeholder="location"
                 onChange={handleChange}
                 />
                 <input
                 type="text"
-                value={newForm.description}
+                value={newPost.description}
                 name="description"
                 placeholder="description"
                 onChange={handleChange}
                 />
                 <input type="submit" value="Create Post" />
             </form>
-            {props.post ? loaded() : loading()}
+            
         </section>
     );
 };
