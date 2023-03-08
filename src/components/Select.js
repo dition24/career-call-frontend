@@ -2,7 +2,7 @@
 
 function Select(props) {
     return (
-        <h1>1</h1>
+        <h1>Select</h1>
     )
 }
 
