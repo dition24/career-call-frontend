@@ -1,7 +1,8 @@
 // left sidebar
 import {Link} from 'react-router-dom'
+import { useState } from "react";
 
-function Index(props) {
+function Career(props) {
 
    
     // loaded function
@@ -20,8 +21,10 @@ function Index(props) {
     };
 
     return (
-        <h1>{props.career ? loaded() : loading()}</h1>
+        <div>
+            {props.career ? loaded() : loading()}
+        </div>
     )
 }
 
-export default Index
+export default Career

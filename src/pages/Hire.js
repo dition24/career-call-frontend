@@ -1,7 +1,7 @@
 // Employer hiring page
 import { useState, useEffect } from 'react'
-import Index from '../components/Index'
-import Select from '../components/Select'
+import Career from '../components/Career'
+import Post from '../components/Post'
 import Nav from '../components/Nav'
 
 
@@ -15,13 +15,15 @@ function Hire(props) {
         salary: 100000
     }
 
-    const [career, setCareer] = useState(job)
-
+    const [career, setCareer] = useState(null)
+    
     const URL = 'http://localhost:3000/hires/'
+
+    
 
     const getCareer = async () => {
         try {
-            const response = await fetch(job)
+            const response = await fetch(URL)
             const data = await response.json()
             setCareer(data)
         } catch (error) {
@@ -51,8 +53,8 @@ function Hire(props) {
     return (
         <div>
             <Nav />
-            <Index  />
-            <Select />
+            <Career career={career} createCareer={createCareer}/>
+            <Post />
         </div>
 
     )
