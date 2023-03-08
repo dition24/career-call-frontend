@@ -27,4 +27,4 @@ function Index(props) {
     )
 }
 
-export default Career
+export default Index
