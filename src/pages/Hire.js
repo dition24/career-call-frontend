@@ -10,7 +10,7 @@ function Hire(props) {
 
     const [career, setCareer] = useState(null)
     
-    const URL = 'http://localhost:3000/hires/'
+    const URL = 'http://localhost:3000/hires'
 
     
 
