@@ -1,7 +1,6 @@
 //right details
+import { useState } from 'react'
 
-import {useState} from 'react'
-import { Link } from 'react-router-dom'
 function HiresSelect(props) {
 
     const [newPost, setNewPost] = useState({
@@ -9,6 +8,7 @@ function HiresSelect(props) {
         position: "",
         location: "",
         description: "",
+        salary: ""
     });
 
     // handleChange function for form
@@ -28,27 +28,12 @@ function HiresSelect(props) {
             position: "",
             location: "",
             description: "",
+            salary: ""
         });
     };
 
-    const loaded = () => {
-        return props.career.map((ad) => (
-            <div key={ad._id} className="ad">
-                <Link to ={`/hires/${ad._id}`}>
-                    <h1>{ad.title} | {ad.company} | {ad.location}</h1>
-                </Link>
-            </div>
-        ));
-    };
-
-    const loading = () => {
-        return <h1>Loading...</h1>;
-    };
-
-    
     return (
-        <div className="ad-section">
-            <h1>hi</h1>
+        <div>
             <form onSubmit={handleSubmit}>
                 <input
                 type="text"
@@ -78,9 +63,15 @@ function HiresSelect(props) {
                 placeholder="description"
                 onChange={handleChange}
                 />
+                <input 
+                type="text" 
+                value={newPost.salary}
+                name="salary"
+                placeholder="salary"
+                onChange={handleChange}
+                />
                 <input type="submit" value="Create Post" />
             </form>
-            {props.career ? loaded() : loading()}
         </div>
     )
 }

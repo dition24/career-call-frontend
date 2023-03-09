@@ -3,7 +3,7 @@
 function EditSelect(props) {
     return (
         <div>
-            <section className="ad-section">
+            <section>
                 <form onSubmit={handleSubmit}>
                     <input
                     type="text"
