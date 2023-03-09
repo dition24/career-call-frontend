@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import Land from './pages/Land'
 import Hire from './pages/Hire'
 import Job from './pages/Job'
-import HiresSelect from './components/HiresSelect';
+
 
 function App() {
   return (

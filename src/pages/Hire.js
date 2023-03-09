@@ -4,20 +4,18 @@ import Index from '../components/Index'
 import HiresSelect from '../components/HiresSelect'
 import Nav from '../components/Nav'
 
-
-
 function Hire(props) {
 
     const [career, setCareer] = useState(null)
     
-    const URL = 'http://localhost:3000/hires'
-
-    
+    const URL = 'http://localhost:3001/hires'
 
     const getCareer = async () => {
         try {
             const response = await fetch(URL)
+            console.log(response)
             const data = await response.json()
+            console.log(data)
             setCareer(data)
         } catch (error) {
             console.log('error performing task')
@@ -46,7 +44,7 @@ function Hire(props) {
     return (
         <div>
             <Nav />
-            <Index />
+            <Index career={career} />
             <HiresSelect career={career} createCareer={createCareer}/>
         </div>
 
