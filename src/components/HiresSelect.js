@@ -8,7 +8,6 @@ function HiresSelect(props) {
             <h2>Position</h2>
             <h3>Location</h3>
             <p>Description</p>
-            <button>APPLY</button>
         </div>
     )
 }
