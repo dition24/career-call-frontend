@@ -22,9 +22,6 @@ const handleSubmit = (event) => {
 
     return (
         <nav className="nav">
-            <Link to='/hires/new'>
-                <button>Add New Job</button>
-            </Link>
             <form onSubmit={handleSubmit}>
                 <input 
                     type="text"

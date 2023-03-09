@@ -1,7 +1,7 @@
 //right details
 
 import {useState} from 'react'
-
+import { Link } from 'react-router-dom'
 function HiresSelect(props) {
 
     const [newPost, setNewPost] = useState({
@@ -29,6 +29,20 @@ function HiresSelect(props) {
             location: "",
             description: "",
         });
+    };
+
+    const loaded = () => {
+        return props.career.map((ad) => (
+            <div key={ad._id} className="ad">
+                <Link to ={`/hires/${ad._id}`}>
+                    <h1>{ad.title} | {ad.company} | {ad.location}</h1>
+                </Link>
+            </div>
+        ));
+    };
+
+    const loading = () => {
+        return <h1>Loading...</h1>;
     };
 
     
@@ -66,7 +80,7 @@ function HiresSelect(props) {
                 />
                 <input type="submit" value="Create Post" />
             </form>
-            
+            {props.career ? loaded() : loading()}
         </div>
     )
 }

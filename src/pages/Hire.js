@@ -10,7 +10,7 @@ function Hire(props) {
 
     const [career, setCareer] = useState(null)
     
-    const URL = 'http://localhost:3000/hires/'
+    const URL = 'http://localhost:3000/hires'
 
     
 
@@ -46,8 +46,8 @@ function Hire(props) {
     return (
         <div>
             <Nav />
-            <Index career={career} createCareer={createCareer}/>
-            <HiresSelect />
+            <Index />
+            <HiresSelect career={career} createCareer={createCareer}/>
         </div>
 
     )
