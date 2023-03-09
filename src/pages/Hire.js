@@ -1,19 +1,12 @@
 // Employer hiring page
 import { useState, useEffect } from 'react'
 import Index from '../components/Index'
-
+import HiresSelect from '../components/HiresSelect'
 import Nav from '../components/Nav'
 
 
-function Hire(props) {
 
-    const job = {
-        title: 'developer',
-        location: 'florida',
-        company: 'apple',
-        description: 'tech stuff',
-        salary: 100000
-    }
+function Hire(props) {
 
     const [career, setCareer] = useState(null)
     
@@ -54,7 +47,7 @@ function Hire(props) {
         <div>
             <Nav />
             <Index career={career} createCareer={createCareer}/>
-            
+            <HiresSelect />
         </div>
 
     )
