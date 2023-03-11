@@ -1,6 +1,12 @@
 //right details
+import { useState } from "react";
 
 function EditSelect(props) {
+
+    const [editPost, setEditPost] = useState({
+
+    });
+
     return (
         <div>
             <section>
