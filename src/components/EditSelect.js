@@ -4,11 +4,6 @@ import { useState } from "react";
 function EditSelect(props) {
 
     const [editPost, setEditPost] = useState({
-<<<<<<< HEAD
-
-    });
-
-=======
         company: "",
         position: "",
         location: "",
@@ -39,7 +34,6 @@ function EditSelect(props) {
         });
     };
 
->>>>>>> main
     return (
         <div>
             <section>
