@@ -1,4 +1,5 @@
 //right details
+import { useState } from "react";
 
 function EditSelect(props) {
 
