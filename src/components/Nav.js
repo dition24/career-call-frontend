@@ -1,44 +1,41 @@
-// import { Link } from 'react-router-dom'
-// import { useState } from 'react'
 
-// function Nav(props) {
+import { useState } from 'react'
 
-// const [jobState, setJobState] = useState({
-//     jobTitle: "", 
-//     // WIP:
-// })
+function Nav(props) {
 
-// const handleChange = (event) => {
-//     setJobState({
-//         jobTitle: event.target.value
-//         // WIP:
-//     })
-// }
+const [jobState, setJobState] = useState({
+    jobTitle: "", 
+    // WIP:
+})
 
-// const handleSubmit = (event) => {
-//     event.preventDefault()
-//     // WIP:
-// }
+const handleChange = (event) => {
+    setJobState({
+        jobTitle: event.target.value
+        // WIP:
+    })
+}
 
-//     return (
-//         <nav className="nav">
-//             <Link to='/hires'>
-//                 <button>Add New Job</button>
-//             </Link>
-//             <form onSubmit={handleSubmit}>
-//                 <input 
-//                     type="text"
-//                     // value={jobState.jobTitle}
-//                     onChange={handleChange}
-//                 />
-//                 <input 
-//                 type="submit" 
-//                 value="Search" 
-//                 placeholder="Search"
-//                 />
-//             </form>
-//         </nav>
-//     )
-// }
+const handleSubmit = (event) => {
+    event.preventDefault()
+    // WIP:
+}
 
-// export default Nav
+    return (
+        <nav className="nav">
+            <form onSubmit={handleSubmit}>
+                <input 
+                    type="text"
+                    value={jobState.jobTitle}
+                    onChange={handleChange}
+                />
+                <input 
+                type="submit" 
+                value="Search" 
+                placeholder="Search"
+                />
+            </form>
+        </nav>
+    )
+}
+
+export default Nav

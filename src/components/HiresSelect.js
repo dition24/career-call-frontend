@@ -1,19 +1,19 @@
-//employer post page
-import { useState } from "react";
-import { Link } from "react-router-dom";
+//right details
+import { useState } from 'react'
 
-function Post(props) {
-    // state to hold formData
+function HiresSelect(props) {
+
     const [newPost, setNewPost] = useState({
         company: "",
         position: "",
         location: "",
         description: "",
+        salary: ""
     });
 
     // handleChange function for form
     const handleChange = (event) => {
-        setNewForm((prevState) => ({
+        setNewPost((prevState) => ({
             ...prevState,
             [event.target.name]: event.target.value,
         }));
@@ -23,31 +23,17 @@ function Post(props) {
     const handleSubmit = (event) => {
         event.preventDefault();
         props.createPost(newPost);
-        setNewForm({
+        setNewPost({
             company: "",
             position: "",
             location: "",
             description: "",
+            salary: ""
         });
     };
 
-    // loaded function
-    const loaded = () => {
-        return props.post.map((ad) => (
-            <div key={ad._id} className="ad">
-                <Link to ={`/hires/${ad._id}`}>
-                    <h1>{ad.company}</h1>
-                </Link>
-            </div>
-        ));
-    };
-
-    const loading = () => {
-        return <h1>Loading...</h1>;
-    };
-    
     return (
-        <section className="ad-section">
+        <div>
             <form onSubmit={handleSubmit}>
                 <input
                 type="text"
@@ -58,30 +44,36 @@ function Post(props) {
                 />
                 <input
                 type="text"
-                value={newForm.position}
+                value={newPost.position}
                 name="position"
                 placeholder="position"
                 onChange={handleChange}
                 />
                 <input
                 type="text"
-                value={newForm.location}
+                value={newPost.location}
                 name="location"
                 placeholder="location"
                 onChange={handleChange}
                 />
                 <input
                 type="text"
-                value={newForm.description}
+                value={newPost.description}
                 name="description"
                 placeholder="description"
                 onChange={handleChange}
                 />
+                <input 
+                type="text" 
+                value={newPost.salary}
+                name="salary"
+                placeholder="salary"
+                onChange={handleChange}
+                />
                 <input type="submit" value="Create Post" />
             </form>
-            {props.post ? loaded() : loading()}
-        </section>
-    );
-};
+        </div>
+    )
+}
 
-export default Post;
+export default HiresSelect

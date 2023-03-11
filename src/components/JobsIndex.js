@@ -1,15 +1,15 @@
 // left sidebar
 import {Link} from 'react-router-dom'
-// import { useState } from "react";
+import { useState } from "react";
 
-function Index(props) {
+function JobsIndex(props) {
 
    
     // loaded function
     const loaded = () => {
         return props.career.map((ad) => (
             <div key={ad._id} className="ad">
-                <Link to ={`/hires/${ad._id}`}>
+                <Link to ={`/jobs/${ad._id}`}>
                     <h1>{ad.title} | {ad.company} | {ad.location}</h1>
                 </Link>
             </div>
@@ -27,4 +27,4 @@ function Index(props) {
     )
 }
 
-export default Index
+export default JobsIndex
