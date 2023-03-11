@@ -1,10 +1,11 @@
 //right details
+import { useState } from "react";
 
 function EditSelect(props) {
 
     const [editPost, setEditPost] = useState({
         company: "",
-        position: "",
+        title: "",
         location: "",
         description: "",
         salary: ""
@@ -46,9 +47,9 @@ function EditSelect(props) {
                     />
                     <input
                     type="text"
-                    value={editPost.position}
-                    name="position"
-                    placeholder={props.position}
+                    value={editPost.title}
+                    name="title"
+                    placeholder={props.title}
                     onChange={handleChange}
                     />
                     <input
