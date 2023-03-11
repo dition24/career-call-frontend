@@ -1,4 +1,4 @@
-// edit/delete page for employers
+// edit page for employers
 
 function Edit(props) {
     return (
@@ -6,6 +6,7 @@ function Edit(props) {
             <Nav />
             <Index />
             <EditSelect />
+            {/* pass props to editSelect */}
         </div>
     )
 }
