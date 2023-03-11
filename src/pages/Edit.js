@@ -1,5 +1,9 @@
 // edit page for employers
 
+import Nav from '../components/Nav'
+import Index from '../components/Index'
+import EditSelect from '../components/EditSelect'
+
 function Edit(props) {
     return (
         <div>
@@ -10,3 +14,5 @@ function Edit(props) {
         </div>
     )
 }
+
+export default Edit
