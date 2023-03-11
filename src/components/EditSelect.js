@@ -69,7 +69,7 @@ function EditSelect(props) {
                     <input
                     type="text"
                     value={editPost.salary}
-                    name="descrsalaryiption"
+                    name="salary"
                     placeholder={props.salary}
                     onChange={handleChange}
                     />
