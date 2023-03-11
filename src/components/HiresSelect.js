@@ -5,7 +5,7 @@ function HiresSelect(props) {
 
     const [newPost, setNewPost] = useState({
         company: "",
-        position: "",
+        title: "",
         location: "",
         description: "",
         salary: ""
@@ -18,14 +18,15 @@ function HiresSelect(props) {
             [event.target.name]: event.target.value,
         }));
     };
+
     
     // handle submit function for form
     const handleSubmit = (event) => {
         event.preventDefault();
-        props.createPost(newPost);
+        props.createCareer(newPost);
         setNewPost({
             company: "",
-            position: "",
+            title: "",
             location: "",
             description: "",
             salary: ""
@@ -44,9 +45,9 @@ function HiresSelect(props) {
                 />
                 <input
                 type="text"
-                value={newPost.position}
-                name="position"
-                placeholder="position"
+                value={newPost.title}
+                name="title"
+                placeholder="title"
                 onChange={handleChange}
                 />
                 <input

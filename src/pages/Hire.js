@@ -13,23 +13,21 @@ function Hire(props) {
     const getCareer = async () => {
         try {
             const response = await fetch(URL)
-            console.log(response)
             const data = await response.json()
-            console.log(data)
             setCareer(data)
         } catch (error) {
             console.log('error performing task')
         }
     }
 
-    const createCareer = async () => {
+    const createCareer = async (newCareer) => {
         try {
             await fetch(URL, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'Application/json',
                 },
-                body: JSON.stringify(career),
+                body: JSON.stringify(newCareer),
             })
             getCareer()
         } catch (error) {
