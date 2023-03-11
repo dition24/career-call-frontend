@@ -1,0 +1,9 @@
+// left sidebar
+
+function Index(props) {
+    return (
+        <h1>1</h1>
+    )
+}
+
+export default Index
