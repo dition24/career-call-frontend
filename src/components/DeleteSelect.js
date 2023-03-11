@@ -1,17 +1,21 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 function DeleteSelect(props) {
-    const handleDelete = () => {
-        props.deletePost();
-    };
-
-    return (
-        <div>
+    return(
+<div>
+    <h2> {props.title}</h2>
+<h2>{props.location}</h2>
+<h2>{props.company}</h2>
+<p>{props.description}</p>
             <section>
-                <button onClick={handleDelete}>Delete</button>
+                <Link><button onClick={handleDelete}>Delete</button></Link>
+                <Link to = "/edit"><button>Edit</button></Link>
             </section>
         </div>
-    );
+    )
 }
+
+//edit button 
 
 export default DeleteSelect;
