@@ -9,11 +9,11 @@ function DeleteSelect(props) {
             <h2>{props.company}</h2>
             <p>{props.description}</p>
             <section>
-                <Link>
-                    <button>Delete</button>
-                </Link>
                 <Link to="/edit">
                     <button>Edit</button>
+                </Link>
+                <Link>
+                    <button>Delete</button>
                 </Link>
             </section>
         </div>
