@@ -1,24 +1,32 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import axios from 'axios';
 
 function DeleteSelect(props) {
+
+    const handleClick = () => {
+        axios.delete(`/jobs/:id`)
+            .then(response => {
+                
+                console.log(response);
+            })
+            .catch(error => {
+                
+                console.log(error);
+            });
+    }
+
     return (
         <div>
             <h2>{props.title}</h2>
             <h2>{props.location}</h2>
             <h2>{props.company}</h2>
             <p>{props.description}</p>
-            <section>
-                <Link to="/edit">
-                    <button>Edit</button>
-                </Link>
-                <Link>
-                    <button>Delete</button>
-                </Link>
-            </section>
+            <h4>${props.salary}</h4>
+           <span onClick={handleClick}>delete</span>
         </div>
     )
 }
+
 
 
 export default DeleteSelect;
