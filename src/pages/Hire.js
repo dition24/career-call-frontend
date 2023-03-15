@@ -41,7 +41,7 @@ function Hire(props) {
 
     return (
         <div>
-            <Nav />
+            <Nav setCareer={setCareer}/>
             <Index career={career} />
             <HiresSelect career={career} createCareer={createCareer}/>
         </div>
