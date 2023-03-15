@@ -24,6 +24,7 @@ const handleSubmit = (event) => {
     event.preventDefault()
     jobData(jobState.jobTitle)
     console.log(`Searching for jobs with title: ${jobState.jobTitle}`)
+    setJobState('')
     // WIP:
 }
 
