@@ -63,7 +63,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path='/' element={<Land />} />
-        <Route path='/hires' element={<Hire career={career} createCareer={createCareer} />}/>
+        <Route path='/hires' element={<Hire career={career} setCareer={setCareer} createCareer={createCareer} />}/>
         <Route path='/edit' element={<Edit updateCareer={updateCareer}/>} />
         <Route path='/hires/:id' element={<Delete career={career} deleteCareer={deleteCareer}/>}/>
         <Route path='/jobs' element={<Job />} />
