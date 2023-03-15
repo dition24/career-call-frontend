@@ -1,5 +1,5 @@
 //right details
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function EditSelect(props) {
 
@@ -22,16 +22,22 @@ function EditSelect(props) {
     // handle submit function for form
     const handleSubmit = (event) => {
         event.preventDefault();
-        props.createPost(editPost);
-        setEditPost({
-            company: "",
-            position: "",
-            location: "",
-            description: "",
-            salary: ""
-             // pass in prop placeholders here
-        });
+        props.updateCareer(editPost, props.job._id);
     };
+
+    const loaded = () => {
+        return <h1>{props.job.company}</h1>
+    }
+
+    const loading =() => {
+        return <h1>loading</h1>
+    }
+
+    useEffect(() => {
+        if (props.job) {
+            setEditPost(props.job)
+        }
+    },[props.job])
 
     return (
         <div>
@@ -41,35 +47,30 @@ function EditSelect(props) {
                     type="text"
                     value={editPost.company}
                     name="company"
-                    placeholder={props.company}
                     onChange={handleChange}
                     />
                     <input
                     type="text"
                     value={editPost.title}
                     name="title"
-                    placeholder={props.title}
                     onChange={handleChange}
                     />
                     <input
                     type="text"
                     value={editPost.location}
                     name="location"
-                    placeholder={props.location}
                     onChange={handleChange}
                     />
                     <input
                     type="text"
                     value={editPost.description}
                     name="description"
-                    placeholder={props.description}
                     onChange={handleChange}
                     />
                     <input
                     type="text"
                     value={editPost.salary}
                     name="salary"
-                    placeholder={props.salary}
                     onChange={handleChange}
                     />
                     <input type="submit" value="Confirm Edit" />

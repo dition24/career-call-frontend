@@ -17,7 +17,7 @@ const handleClick = () => {
             <h2>{props.company}</h2>
             <p>{props.description}</p>
             <h4>${props.salary}</h4>
-            <Link to='/edit'>
+            <Link to={`/edit/${props.job._id}`}>
                 <button>edit</button>
             </Link>
            <button onClick={handleClick}>delete</button>
