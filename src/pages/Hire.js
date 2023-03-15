@@ -13,10 +13,10 @@ function Hire(props) {
             <Link to='/'>
                 <button>Back</button>
             </Link>
-            <Nav />
+            <Nav setCareer={setCareer}/>
             <Index career={props.career} />
             <HiresSelect career={props.career} createCareer={props.createCareer}/>
-        </div>
+       </div>
     );
 }
 
