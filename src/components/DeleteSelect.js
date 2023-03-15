@@ -3,11 +3,8 @@ import { useNavigate, Link, useParams } from 'react-router-dom';
 
 function DeleteSelect(props) {
 const navigate = useNavigate()
-const { id } = useParams()
-const careers = props.career
-const job = careers ? careers.find((c) => c._id === id) : null
 const handleClick = () => {
-       props.deleteCareer(job._id)
+       props.deleteCareer(props.job._id)
        navigate('/hires')
     }
 
@@ -18,7 +15,7 @@ const handleClick = () => {
             <h2>{props.company}</h2>
             <p>{props.description}</p>
             <h4>${props.salary}</h4>
-            <Link to='/edit'>
+            <Link to={`/edit/${props.job._id}`}>
                 <button>edit</button>
             </Link>
            <button onClick={handleClick}>delete</button>

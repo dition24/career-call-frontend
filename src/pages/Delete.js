@@ -24,6 +24,7 @@ function Delete(props) {
                 description={job.description} 
                 salary={job.salary}
                 deleteCareer={props.deleteCareer}
+                career={props.career}
                 job={job}
             /> 
         </div>

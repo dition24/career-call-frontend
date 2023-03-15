@@ -12,7 +12,7 @@ import Delete from './pages/Delete'
 function App() {
   
     const [career, setCareer] = useState(null)
-    const URL = 'http://localhost:3001/hires'
+    const URL = 'http://localhost:3001/hires/'
     const getCareer = async () => {
         try {
             const response = await fetch(URL)
@@ -64,7 +64,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Land />} />
         <Route path='/hires' element={<Hire career={career} setCareer={setCareer} createCareer={createCareer} />}/>
-        <Route path='/edit' element={<Edit updateCareer={updateCareer}/>} />
+        <Route path='/edit/:id' element={<Edit career={career} updateCareer={updateCareer}/>} />
         <Route path='/hires/:id' element={<Delete career={career} deleteCareer={deleteCareer}/>}/>
         <Route path='/jobs' element={<Job />} />
       </Routes>
