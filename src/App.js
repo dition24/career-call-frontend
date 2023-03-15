@@ -10,10 +10,9 @@ import Delete from './pages/Delete'
 
 
 function App() {
-  const [career, setCareer] = useState(null)
-    
+  
+    const [career, setCareer] = useState(null)
     const URL = 'http://localhost:3001/hires'
-
     const getCareer = async () => {
         try {
             const response = await fetch(URL)
@@ -39,6 +38,24 @@ function App() {
         }
     }
 
+    const updateCareer = async (job, id) => {
+      await fetch(URL + id, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'Application/json',
+        },
+        body: JSON.stringify(job)
+      })
+      getCareer()
+    }
+
+    const deleteCareer = async (id) => {
+      await fetch(URL + id, {
+        method: 'DELETE',
+      })
+      getCareer()
+    }
+
     useEffect(() => {
         getCareer()
     }, [])
@@ -47,8 +64,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Land />} />
         <Route path='/hires' element={<Hire career={career} createCareer={createCareer} />}/>
-        <Route path='/edit' element={<Edit />} />
-        <Route path='/hires/:id' element={<Delete career={career}/>}/>
+        <Route path='/edit' element={<Edit updateCareer={updateCareer}/>} />
+        <Route path='/hires/:id' element={<Delete career={career} deleteCareer={deleteCareer}/>}/>
         <Route path='/jobs' element={<Job />} />
       </Routes>
     </div>
