@@ -2,7 +2,9 @@ import React from "react";
 import { useNavigate, Link, useParams } from 'react-router-dom';
 
 function DeleteSelect(props) {
+
 const navigate = useNavigate()
+
 const handleClick = () => {
        props.deleteCareer(props.job._id)
        navigate('/hires')

@@ -24,6 +24,7 @@ const handleSubmit = (event) => {
     event.preventDefault()
     jobData(jobState.jobTitle)
     console.log(`Searching for jobs with title: ${jobState.jobTitle}`)
+    setJobState('')
     // WIP:
 }
 
@@ -31,14 +32,16 @@ const handleSubmit = (event) => {
         <nav className="nav">
             <form onSubmit={handleSubmit}>
                 <input 
+                    className='search'
                     type="text"
                     value={jobState.jobTitle}
                     onChange={handleChange}
                     placeholder="Job Title"
                 />
                 <input 
-                type="submit" 
-                value="Search" 
+                    className='submit'
+                    type="submit" 
+                    value="Search" 
                 />
             </form>
         </nav>

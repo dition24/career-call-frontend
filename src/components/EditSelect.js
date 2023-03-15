@@ -9,7 +9,6 @@ function EditSelect(props) {
         location: "",
         description: "",
         salary: ""
-        // pass in prop placeholders here
     });
 
     // handleChange function for form

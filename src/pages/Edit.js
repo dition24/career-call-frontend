@@ -11,15 +11,12 @@ function Edit(props) {
     const job = careers ? careers.find((c) => c._id === id) : null
 
     return (
-        <div>
-            <div>
-            <Link to='/'>
-                <button>Back</button>
+        <div className='edit'>
+            <Link to='/hires'>
+                <button className='back'>Back</button>
             </Link>
-            <Nav setCareer={props.setCareer} />
             <Index career={props.career} />
             <EditSelect career={props.career} updateCareer={props.updateCareer} job={job} />
-        </div>
             {/* pass props to editSelect */}
         </div>
     )
