@@ -1,6 +1,5 @@
 // edit/Delete page for employers
-// import { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Link,} from 'react-router-dom'
 import Nav from '../components/Nav'
 import Index from '../components/Index'
 import DeleteSelect from '../components/DeleteSelect'
@@ -10,31 +9,22 @@ function Delete(props) {
     const { id } = useParams()
     const careers = props.career
     const job = careers ? careers.find((c) => c._id === id) : null
-    const loaded = () => {
-        return (
-            <>
-                <h2>{careers.company}</h2>
-                <h2>{careers.location}</h2>
-                <h2>{careers.title}</h2>
-                <p>{careers.description}</p>
-                <h4>{careers.salary}</h4>
-            </>
-        )
-    }
-
-    const loading = () => {
-        return (
-            <h1>Loading...</h1>
-        )
-    }
 
     return (
         <div>
+            <Link to='/hires'>
+                <button>Back</button>
+            </Link>
             <Nav />
             <Index career={props.career}/>
-            <DeleteSelect  /> 
-            { job ? loading() : loaded()}
-            {/* pass props to DeleteSelect */}
+            <DeleteSelect 
+                title={job.title} 
+                location={job.location} 
+                company={job.company} 
+                description={job.description} 
+                salary={job.salary}
+                deleteCareer={props.deleteCareer}
+            /> 
         </div>
     )
 }
