@@ -5,18 +5,15 @@ import HiresSelect from '../components/HiresSelect'
 import Nav from '../components/Nav'
 
 function Hire(props) {
-
-    
-
     return (
         <div>
             <Link to='/'>
                 <button>Back</button>
             </Link>
-            <Nav setCareer={setCareer}/>
+            <Nav setCareer={props.setCareer} />
             <Index career={props.career} />
             <HiresSelect career={props.career} createCareer={props.createCareer}/>
-       </div>
+        </div>
     );
 }
 

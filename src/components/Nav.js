@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Hire from '../pages/Hire'
+// import Hire from '../pages/Hire'
 function Nav(props) {
 
 const [jobState, setJobState] = useState({
