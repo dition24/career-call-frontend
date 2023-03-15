@@ -34,9 +34,11 @@ function HiresSelect(props) {
     };
 
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
+        <div className='container'>
+        <div className='hire'>
+            <form className='hireForm' onSubmit={handleSubmit}>
                 <input
+                className='reginput'
                 type="text"
                 value={newPost.company}
                 name="company"
@@ -44,6 +46,7 @@ function HiresSelect(props) {
                 onChange={handleChange}
                 />
                 <input
+                className='reginput'
                 type="text"
                 value={newPost.title}
                 name="title"
@@ -51,6 +54,7 @@ function HiresSelect(props) {
                 onChange={handleChange}
                 />
                 <input
+                className='reginput'
                 type="text"
                 value={newPost.location}
                 name="location"
@@ -58,6 +62,7 @@ function HiresSelect(props) {
                 onChange={handleChange}
                 />
                 <input
+                className='desc'
                 type="text"
                 value={newPost.description}
                 name="description"
@@ -65,14 +70,16 @@ function HiresSelect(props) {
                 onChange={handleChange}
                 />
                 <input 
+                className='reginput'
                 type="text" 
                 value={newPost.salary}
                 name="salary"
                 placeholder="salary"
                 onChange={handleChange}
                 />
-                <input type="submit" value="Create Post" />
+                <input className='post' type="submit" value="Create Post" />
             </form>
+        </div>
         </div>
     )
 }

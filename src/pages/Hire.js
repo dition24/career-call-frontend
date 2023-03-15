@@ -6,14 +6,16 @@ import Nav from '../components/Nav'
 
 function Hire(props) {
     return (
-        <div>
-            <Link to='/'>
-                <button>Back</button>
-            </Link>
-            <Nav setCareer={props.setCareer} />
-            <Index career={props.career} />
-            <HiresSelect career={props.career} createCareer={props.createCareer}/>
-        </div>
+        <div className='container'>
+            <div>
+                <Link to='/'>
+                    <button className='back'>Back</button>
+                </Link>
+                <Nav setCareer={props.setCareer} />
+                <Index career={props.career} />
+                <HiresSelect career={props.career} createCareer={props.createCareer} />
+            </div>
+        </div>    
     );
 }
 

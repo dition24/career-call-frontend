@@ -27,6 +27,86 @@ nav {
   font-size: 30px;
   
 }
+/* hiring */
+
+.search {
+ border-radius: 20px;
+ width: 200px;
+ height: 30px;
+ margin: 10px;
+ text-align: center;
+ font-size: large;
+}
+
+.submit {
+  margin: 10px;
+  height: 25px;
+  width: 100px;
+  font-size: large;
+}
+
+.back {
+  margin: 30px;
+  width: 100px;
+  height: 40px;
+  font-size: large;
+}
+
+.container {
+  display: flex;
+  width: 50%;
+  height: 100%;
+}
+
+.index {
+  position: absolute;
+  left: 5%;
+}
+
+.hire {
+  position: absolute;
+  right: 0%;
+  top: 15%;
+  width: 50%;
+  height: 100%;
+}
+
+.hireForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid black;
+    width: 100%;
+    height: 70%;
+}
+
+.desc {
+  height: 20%;
+  width: 60%;
+  margin: 30px;
+  text-align: center;
+  font-size: 50px;
+}
+
+.reginput {
+  margin: 30px;
+  height: 10%;
+  width: 60%;
+  text-align: center;
+  font-size: 30px;
+}
+
+.post {
+  margin: 20px;
+  height: 50px;
+  width: 200px;
+  font-size: large;
+}
+
+/* edit/delete */
+
+
 
 
 
