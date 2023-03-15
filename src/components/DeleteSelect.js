@@ -1,18 +1,13 @@
 import React from "react";
 import axios from 'axios';
+import {useNavigate} from 'react-router-dom';
 
 function DeleteSelect(props) {
-
+const navigate = useNavigate()
     const handleClick = () => {
-        axios.delete(`/jobs/:id`)
-            .then(response => {
-                
-                console.log(response);
-            })
-            .catch(error => {
-                
-                console.log(error);
-            });
+       props.deleteCareer(job._id)
+
+       navigate('/hires')
     }
 
     return (
@@ -22,7 +17,7 @@ function DeleteSelect(props) {
             <h2>{props.company}</h2>
             <p>{props.description}</p>
             <h4>${props.salary}</h4>
-           <span onClick={handleClick}>delete</span>
+           <button onClick={handleClick}>delete</button>
         </div>
     )
 }
