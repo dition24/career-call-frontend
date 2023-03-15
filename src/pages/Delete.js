@@ -1,30 +1,39 @@
 // edit/Delete page for employers
-import { useState } from 'react'
+// import { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
 import Nav from '../components/Nav'
 import Index from '../components/Index'
 import DeleteSelect from '../components/DeleteSelect'
 
 function Delete(props) {
-   
-    const [career, setCareer] = useState(null)
     
-    const URL = 'http://localhost:3001/hires'
+    const { id } = useParams()
+    const careers = props.career
+    const job = careers ? careers.find((c) => c._id === id) : null
+    const loaded = () => {
+        return (
+            <>
+                <h2>{careers.company}</h2>
+                <h2>{careers.location}</h2>
+                <h2>{careers.title}</h2>
+                <p>{careers.description}</p>
+                <h4>{careers.salary}</h4>
+            </>
+        )
+    }
 
-    const getCareer = async () => {
-        try {
-            const response = await fetch(URL)
-            const data = await response.json()
-            setCareer(data)
-        } catch (error) {
-            console.log('error performing task')
-        }
+    const loading = () => {
+        return (
+            <h1>Loading...</h1>
+        )
     }
 
     return (
         <div>
             <Nav />
-            <Index />
-            <DeleteSelect title='who' location='where' description='what' company='apple' /> 
+            <Index career={props.career}/>
+            <DeleteSelect  /> 
+            { job ? loading() : loaded()}
             {/* pass props to DeleteSelect */}
         </div>
     )
