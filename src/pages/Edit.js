@@ -25,7 +25,6 @@ function Edit(props) {
                  career={props.career}
                  job={job}
             />
-            {/* pass props to editSelect */}
         </div>
     )
 }
