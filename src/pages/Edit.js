@@ -17,7 +17,6 @@ function Edit(props) {
             </Link>
             <Index career={props.career} />
             <EditSelect career={props.career} updateCareer={props.updateCareer} job={job} />
-            {/* pass props to editSelect */}
         </div>
     )
 }

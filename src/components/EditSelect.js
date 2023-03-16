@@ -1,5 +1,6 @@
 //right details
 import { useState, useEffect } from "react";
+import { useNavigate } from 'react-router-dom'
 
 function EditSelect(props) {
 
@@ -10,6 +11,8 @@ function EditSelect(props) {
         description: "",
         salary: ""
     });
+
+    const navigate = useNavigate()
 
     // handleChange function for form
     const handleChange = (event) => {
@@ -23,15 +26,8 @@ function EditSelect(props) {
     const handleSubmit = (event) => {
         event.preventDefault();
         props.updateCareer(editPost, props.job._id);
+        navigate(`/hires/${props.job._id}`)
     };
-
-    const loaded = () => {
-        return <h1>{props.job.company}</h1>
-    }
-
-    const loading =() => {
-        return <h1>loading</h1>
-    }
 
     useEffect(() => {
         if (props.job) {
