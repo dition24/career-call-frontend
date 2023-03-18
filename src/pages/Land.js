@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 function Land(props) {
     return (
         <>
-            <nav>Welcome to Career Call</nav>
+            <nav className='welcome'>Welcome to Career Call</nav>
             <h1 className='landing'>Are You An Employer Or An Employee?</h1>
             <div className='landContainer'>
                 <Link to='/jobs'>

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-// import Hire from '../pages/Hire'
+import Back from '../components/Back'
 function Nav(props) {
 
 const [jobState, setJobState] = useState({
@@ -29,7 +29,9 @@ const handleSubmit = (event) => {
 }
 
     return (
+        
         <nav className="nav">
+            <Back back={props.back}/>
             <form onSubmit={handleSubmit}>
                 <input 
                     className='search'

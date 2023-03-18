@@ -1,7 +1,8 @@
 // edit page for employers
-import { useParams, Link } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import Index from '../components/Index'
 import EditSelect from '../components/EditSelect'
+import Nav from '../components/Nav'
 
 function Edit(props) {
 
@@ -11,9 +12,7 @@ function Edit(props) {
 
     return (
         <div className='edit'>
-            <Link to='/hires'>
-                <button className='back'>Back</button>
-            </Link>
+            <Nav back={`/hires/${job._id}`}/>
             <Index career={props.career} />
             <EditSelect career={props.career} updateCareer={props.updateCareer} job={job} />
         </div>

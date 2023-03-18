@@ -36,40 +36,45 @@ function EditSelect(props) {
     },[props.job])
 
     return (
-        <div className="editSelect">
+        <div className="editContain">
             <section>
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} className="editSelect">
                     <input
+                    className="reginput"
                     type="text"
                     value={editPost.company}
                     name="company"
                     onChange={handleChange}
                     />
                     <input
+                    className="reginput"
                     type="text"
                     value={editPost.title}
                     name="title"
                     onChange={handleChange}
                     />
                     <input
+                    className="reginput"
                     type="text"
                     value={editPost.location}
                     name="location"
                     onChange={handleChange}
                     />
                     <input
+                    className="desc"
                     type="text"
                     value={editPost.description}
                     name="description"
                     onChange={handleChange}
                     />
                     <input
+                    className="reginput"
                     type="text"
                     value={editPost.salary}
                     name="salary"
                     onChange={handleChange}
                     />
-                    <input type="submit" value="Confirm Edit" />
+                    <input className="submit" type="submit" value="Confirm Edit" />
                 </form>
             </section>
         </div>
