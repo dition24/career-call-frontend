@@ -76,8 +76,7 @@ function HiresSelect(props) {
                 placeholder="salary"
                 onChange={handleChange}
                 />
-                <input className='submit
-                ' type="submit" value="Create Post" />
+                <input className='submit' type="submit" value="Create Post" />
             </form>
         </div>
     )
