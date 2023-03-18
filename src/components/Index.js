@@ -9,7 +9,7 @@ function Index(props) {
         return props.career.map((ad) => (
             <div key={ad._id} className="ad">
                 <Link to ={`/hires/${ad._id}`}>
-                    <h1>{ad.title} | {ad.company} | {ad.location}</h1>
+                    <h2>{ad.title} | {ad.company} | {ad.location}</h2>
                 </Link>
             </div>
         ));

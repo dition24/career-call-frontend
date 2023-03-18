@@ -5,7 +5,7 @@ html, body {
 
 /* landing page */
 
-/* nav {
+ nav {
   text-align: center;
   font-size: 30px;
   padding: 30px;
@@ -24,12 +24,11 @@ html, body {
 
 .Employee, .Employer {
   margin: 40px;
-  font-size: 30px; */
-  
-/* } */
+  font-size: 30px;  
+} 
 /* hiring */
 
-/* .search {
+.search {
  border-radius: 20px;
  width: 200px;
  height: 30px;
@@ -53,20 +52,23 @@ html, body {
 }
 
 .container {
-  display: flex;
+  display: inline-block;
   width: 50%;
   height: 100%;
 }
 
-.index {
-  position: absolute;
-  left: 5%;
+
+h2 {
+  margin: 50px;
 }
 
-.hire {
-  position: absolute;
-  right: 0%;
-  top: 15%;
+.index {
+  padding: 10px;
+  height: 100%;
+}
+
+ .hireSelect {
+  padding: 10px;
   width: 50%;
   height: 100%;
 }
@@ -102,7 +104,7 @@ html, body {
   height: 50px;
   width: 200px;
   font-size: large;
-} */
+}  
 
 /* edit/delete */
 

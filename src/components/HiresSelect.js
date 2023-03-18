@@ -34,8 +34,8 @@ function HiresSelect(props) {
     };
 
     return (
-        <div className='container'>
-        <div className='hire'>
+        <div className='container hireContain'>
+        <div className='hireSelect'>
             <form className='hireForm' onSubmit={handleSubmit}>
                 <input
                 className='reginput'

@@ -36,7 +36,7 @@ function EditSelect(props) {
     },[props.job])
 
     return (
-        <div>
+        <div className="editSelect">
             <section>
                 <form onSubmit={handleSubmit}>
                     <input
