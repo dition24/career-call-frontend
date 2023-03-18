@@ -34,8 +34,7 @@ function HiresSelect(props) {
     };
 
     return (
-        <div className='container hireContain'>
-        <div className='hireSelect'>
+        <div className='hireContain'>
             <form className='hireForm' onSubmit={handleSubmit}>
                 <input
                 className='reginput'
@@ -77,9 +76,8 @@ function HiresSelect(props) {
                 placeholder="salary"
                 onChange={handleChange}
                 />
-                <input className='post' type="submit" value="Create Post" />
+                <input className='submit' type="submit" value="Create Post" />
             </form>
-        </div>
         </div>
     )
 }

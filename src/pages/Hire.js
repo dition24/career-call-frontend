@@ -1,5 +1,4 @@
 // Employer hiring page
-import { Link } from 'react-router-dom'
 import Index from '../components/Index'
 import HiresSelect from '../components/HiresSelect'
 import Nav from '../components/Nav'
@@ -7,10 +6,7 @@ import Nav from '../components/Nav'
 function Hire(props) {
     return (
             <div>
-                <Link to='/'>
-                    <button className='back'>Back</button>
-                </Link>
-                <Nav setCareer={props.setCareer} />
+                <Nav setCareer={props.setCareer} back='/'/>
                 <Index career={props.career} />
                 <HiresSelect career={props.career} createCareer={props.createCareer} />
             </div>  

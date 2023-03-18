@@ -1,31 +1,72 @@
 html, body {
   height: 100%;
   width: 100%;
+  margin: 0px;
+}
+
+.back {
+  width: 100px;
+  height: 40px;
+  font-size: 30px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: black;
+  position: fixed;
+  left: 1%;
+  top: 2%;
 }
 
 /* landing page */
 
- nav {
-  text-align: center;
+.Employee, .Employer {
+  width: 150px;
+  height: 50px;
+  font-size: 30px;
+  margin: 50px;
+  background: none;
+  border: 1px solid black;
+  border-radius: 100px;
+  color: white;
+  background-color: black;
+}
+
+.nav {
+  width: 100%;
+  position: sticky;
+  top: 0%;
   font-size: 30px;
   padding: 30px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: blue;
+}
+
+.welcome {
+  text-align: center;
+  font-size: 50px;
+  margin: 60px;
 }
 
 .landing {
   text-align: center;
+  margin: 60px;
 }
 
 .landContainer {
   display: flex;
-  padding: 10px;
+  padding: 20px;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
-.Employee, .Employer {
-  margin: 40px;
-  font-size: 30px;  
-} 
 /* hiring */
 
 .search {
@@ -42,13 +83,10 @@ html, body {
   height: 25px;
   width: 100px;
   font-size: large;
-}
-
-.back {
-  margin: 30px;
-  width: 100px;
-  height: 40px;
-  font-size: large;
+  color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: black;
 }
 
 .container {
@@ -57,57 +95,164 @@ html, body {
   height: 100%;
 }
 
-
-h2 {
-  margin: 50px;
+.hireContain {
+  display: inline-block;
+  position: fixed;
+  top: 21%;
+  width: 50%;
+  height: 100%;
+  padding: 0%;
+  margin: 0%;
 }
 
 .index {
-  padding: 10px;
-  height: 100%;
-}
-
- .hireSelect {
-  padding: 10px;
-  width: 50%;
   height: 100%;
 }
 
 .hireForm {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    border: 2px solid black;
-    width: 100%;
-    height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 2px solid black;
+  width: 100%;
+  height: 750px;
+}
+
+.indexh2 {
+  margin: 50px;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  text-decoration: none;
+  color: blue;
+  text-align: center;
+}
+
+.deleteh2 {
+  margin: 40px;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.index {
+  height: 100%;
 }
 
 .desc {
-  height: 20%;
+  height: 30%;
   width: 60%;
-  margin: 30px;
+  margin: 10px;
   text-align: center;
-  font-size: 50px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+p {
+  width: 700px;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
 }
 
 .reginput {
-  margin: 30px;
-  height: 10%;
+  margin: 20px;
+  height: 5%;
   width: 60%;
   text-align: center;
   font-size: 30px;
+  border: 1px solid black;
+  border-radius: 10px;
 }
 
 .post {
   margin: 20px;
-  height: 50px;
-  width: 200px;
+  height: 10%;
+  width: 20%;
   font-size: large;
 }  
 
 /* edit/delete */
 
+.deleteSelect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 2px solid black;
+  width: 100%;
+  height: 850px;
+}
+
+.deleteContain {
+  display: inline-block;
+  position: fixed;
+  top: 13%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 50%;
+  height: 100%;
+}
+
+.deletebtn {
+  background: none;
+  border: 1px solid black;
+  color: white;
+  background-color: black;
+  font-size: large;
+  border-radius: 10px;
+  width: 80px;
+  height: 30px;
+  margin: 10px;
+}
+
+.editbtn {
+  background: none;
+  font-size: large;
+  color: white;
+  background-color: black;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 80px;
+  height: 30px;
+  margin: 10px;
+}
+
+/* edit */
+
+.editSelect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 2px solid black;
+  width: 100%;
+  height: 850px;
+}
+
+.editContain {
+  display: inline-block;
+  position: fixed;
+  top: 13%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 50%;
+  height: 100%;
+}
+
+.submit {
+  color: white;
+  background-color: black;
+  width: 200px;
+  height: 40px;
+  font-size: 25px;
+}
 
 
 
