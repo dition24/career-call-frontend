@@ -105,6 +105,10 @@ html, body {
   margin: 0%;
 }
 
+.index {
+  height: 100%;
+}
+
 .hireForm {
   display: flex;
   align-items: center;
