@@ -12,7 +12,7 @@ import Delete from './pages/Delete'
 function App() {
   
     const [career, setCareer] = useState(null)
-    const URL = 'http://localhost:3001/hires/'
+    const URL = 'https://career-call-backend.herokuapp.com/hires/'
 
     const getCareer = async () => {
         try {
