@@ -10,8 +10,7 @@ function Delete(props) {
     const job = careers ? careers.find((c) => c._id === id) : null
 
     return (
-        <div className='container'>
-            <div className='delete'>
+            <div>
                 <Link to='/hires'>
                     <button className='back'>Back</button>
                 </Link>
@@ -27,7 +26,6 @@ function Delete(props) {
                     job={job}
                 /> 
             </div>
-        </div>
     )
 }
 

@@ -6,7 +6,6 @@ import Nav from '../components/Nav'
 
 function Hire(props) {
     return (
-        <div className='container'>
             <div>
                 <Link to='/'>
                     <button className='back'>Back</button>
@@ -14,8 +13,7 @@ function Hire(props) {
                 <Nav setCareer={props.setCareer} />
                 <Index career={props.career} />
                 <HiresSelect career={props.career} createCareer={props.createCareer} />
-            </div>
-        </div>    
+            </div>  
     );
 }
 

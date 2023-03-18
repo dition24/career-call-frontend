@@ -1,6 +1,5 @@
 // edit page for employers
 import { useParams, Link } from 'react-router-dom'
-import Nav from '../components/Nav'
 import Index from '../components/Index'
 import EditSelect from '../components/EditSelect'
 

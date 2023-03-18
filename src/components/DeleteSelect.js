@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate, Link, useParams } from 'react-router-dom';
+import { useNavigate, Link, } from 'react-router-dom';
 
 function DeleteSelect(props) {
 
@@ -11,7 +11,7 @@ const handleClick = () => {
     }
 
     return (
-        <div>
+        <div className="deleteSelect">
             <h2>{props.title}</h2>
             <h2>{props.location}</h2>
             <h2>{props.company}</h2>
