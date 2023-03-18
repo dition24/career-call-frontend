@@ -8,7 +8,7 @@ const [jobState, setJobState] = useState({
 })
 // const [job, setJob] = useState(null)
 const jobData = (jobTitle) => {
-    const URL = 'http://localhost:3001/hires/search?jobTitle=' + jobTitle
+    const URL = 'https://career-call-backend.herokuapp.com/hires/search?jobTitle=' + jobTitle
     fetch(URL)
     .then(response => response.json())            
     .then(data => props.setCareer(data))
