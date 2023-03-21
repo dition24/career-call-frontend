@@ -6,8 +6,7 @@ import Hire from './pages/Hire'
 import Job from './pages/Job'
 import Edit from './pages/Edit'
 import Delete from './pages/Delete'
-
-
+import Apply from './pages/Apply';
 
 function App() {
   
@@ -63,11 +62,12 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path='/' element={<Land />} />
+        <Route path='/' element={<Land career={career} />} />
         <Route path='/hires' element={<Hire career={career} setCareer={setCareer} createCareer={createCareer} />}/>
         <Route path='/edit/:id' element={<Edit career={career} updateCareer={updateCareer}/>} />
-        <Route path='/hires/:id' element={<Delete career={career} deleteCareer={deleteCareer}/>}/>
-        <Route path='/jobs' element={<Job career={career} setCareer={setCareer}/>} />
+        <Route path='/hires/:id' element={<Delete career={career} setCareer={setCareer} deleteCareer={deleteCareer}/>}/>
+        <Route path='/jobs' element={<Job career={career} setCareer={setCareer} />} />
+        <Route path='/jobs/:id' element={<Apply career={career} setCareer={setCareer} />} />
       </Routes>
     </div>
   );

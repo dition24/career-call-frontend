@@ -1,8 +1,8 @@
 //this is the landing page (employer or employee choice)
-import { Link } from 'react-router-dom'
-
+import { Link, useParams } from 'react-router-dom'
 
 function Land(props) {
+
     return (
         <>
             <nav className='welcome'>Welcome to Career Call</nav>
