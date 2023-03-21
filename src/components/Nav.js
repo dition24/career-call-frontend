@@ -4,7 +4,6 @@ function Nav(props) {
 
 const [jobState, setJobState] = useState({
     jobTitle: "", 
-    // WIP:
 })
 // const [job, setJob] = useState(null)
 const jobData = (jobTitle) => {
@@ -16,7 +15,6 @@ const jobData = (jobTitle) => {
 const handleChange = (event) => {
     setJobState({
         jobTitle: event.target.value
-        // WIP:
     })
 }
 
@@ -25,7 +23,6 @@ const handleSubmit = (event) => {
     jobData(jobState.jobTitle)
     console.log(`Searching for jobs with title: ${jobState.jobTitle}`)
     setJobState('')
-    // WIP:
 }
 
     return (

@@ -119,7 +119,7 @@ html, body {
   height: 750px;
 }
 
-.indexh2 {
+.indexh2, .jobIndexh2 {
   margin: 50px;
   border: 1px solid black;
   border-radius: 10px;
@@ -129,7 +129,7 @@ html, body {
   text-align: center;
 }
 
-.deleteh2 {
+.deleteh2, .jobh2 {
   margin: 40px;
   border: 1px solid black;
   border-radius: 10px;
@@ -138,7 +138,7 @@ html, body {
   text-align: center;
 }
 
-.index {
+.index, .jobIndex {
   height: 100%;
 }
 
@@ -178,7 +178,7 @@ p {
 
 /* edit/delete */
 
-.deleteSelect {
+.deleteSelect, .jobSelect {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -188,7 +188,7 @@ p {
   height: 850px;
 }
 
-.deleteContain {
+.deleteContain, .jobContain {
   display: inline-block;
   position: fixed;
   top: 13%;
@@ -254,22 +254,12 @@ p {
   font-size: 25px;
 }
 
-
-
-
-
-
-
-
-
-
 /* employee jobs */
+
 
 /* favorites */
 
-/* employer hires */
 
-/* post */
 
 
 

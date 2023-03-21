@@ -9,7 +9,7 @@ function JobsIndex(props) {
         return props.career.map((ad) => (
             <div key={ad._id} className="ad">
                 <Link to ={`/jobs/${ad._id}`}>
-                    <h1>{ad.title} | {ad.company} | {ad.location}</h1>
+                    <h2 className='jobIndexh2'>{ad.title} | {ad.company} | {ad.location}</h2>
                 </Link>
             </div>
         ));
@@ -20,8 +20,10 @@ function JobsIndex(props) {
     };
 
     return (
-        <div>
-            {props.career ? loaded() : loading()}
+        <div className='container'>
+            <div className='jobIndex'>
+                {props.career ? loaded() : loading()}
+            </div>
         </div>
     )
 }

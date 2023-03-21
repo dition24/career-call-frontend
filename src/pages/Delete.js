@@ -9,10 +9,11 @@ function Delete(props) {
     const { id } = useParams()
     const careers = props.career
     const job = careers ? careers.find((c) => c._id === id) : null
+    
 
     return (
             <div>
-                <Nav back='/hires'/>
+                <Nav setCareer={props.setCareer} back='/hires'/>
                 <Index career={props.career} />
                 <DeleteSelect 
                     title={job.title} 
